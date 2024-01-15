@@ -1,6 +1,10 @@
 # BookTracker
+
 A website to keep track of what books that you have read. <br>
-Just a small hobby project to get more comfortable with grid and flex.
+Just a small hobby project to get more comfortable with grid and flex. 
+<br>
+<br>
+https://luddsing.github.io/BookTracker/ 
 - Saves local
 - The user can add books and information about it (Title, Author, pages, and Read-status)
 - Sorting function to easily see which books that has not been read yet.
