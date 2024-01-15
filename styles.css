@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ECF4D6;
+}
+
+header {
+    width: 100%;
+    padding: 30px 0 30px 30px;
+    font-size: 6vh;
+    background-color: #2D9596;
+    color: #FFF2D8;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #265073;
+    margin: 10px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #FFF2D8;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+dialog {
+    position: absolute;
+    bottom: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 50%; 
+}
+
+/* Optional: Styles for overlay */
+::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#bookContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px; /* Adjust the gap between books */
+    padding: 30px; /* Padding around the grid */
+}
+
+.book {
+    background-color: #9AD0C2;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: #265073;
+    font-weight: 300;
+    overflow: auto; /* Add this */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+}
+.buttons{
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+
+.book h1 {
+    font-weight: 800;
+}
+
+.addBookBtn {
+    position: relative;
+    left: 20px;
+    
+}
+
+#bookForm {
+    display: flex;
+    flex-direction: column;
+}
+label[for="read"] {
+    margin-left: 10px;
+}
+input[type="checkbox"] {
+    position: relative;
+    bottom: 26px;
+    right: 285px;
+}
+
+
+input {
+    margin: 1vh;
+    padding: 3vh;
+    border-radius: 10px;
+    font-size: 2vh;
+}
+
+#bookForm button {
+    margin: 1vh;
+    padding: 3vh;
+    border-radius: 10px;
+    font-size: 2vh;
+}
+
+.checkbox-wrapper-10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.checkbox-wrapper-10 .tgl {
+    display: none;
+}
+
+.checkbox-wrapper-10 .tgl,
+.checkbox-wrapper-10 .tgl:after,
+.checkbox-wrapper-10 .tgl:before,
+.checkbox-wrapper-10 .tgl *,
+.checkbox-wrapper-10 .tgl *:after,
+.checkbox-wrapper-10 .tgl *:before,
+.checkbox-wrapper-10 .tgl + .tgl-btn {
+    box-sizing: border-box;
+}
+
+.checkbox-wrapper-10 .tgl + .tgl-btn {
+    outline: 0;
+    display: block;
+    width: 4em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    margin: 0 auto; /* Center the toggle switch */
+}
+
+  .checkbox-wrapper-10 .tgl + .tgl-btn:after,
+  .checkbox-wrapper-10 .tgl + .tgl-btn:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+  }
+  .checkbox-wrapper-10 .tgl + .tgl-btn:after {
+    left: 0;
+  }
+  .checkbox-wrapper-10 .tgl + .tgl-btn:before {
+    display: none;
+  }
+  .checkbox-wrapper-10 .tgl:checked + .tgl-btn:after {
+    left: 50%;
+  }
+
+  .checkbox-wrapper-10 .tgl-flip + .tgl-btn {
+    padding: 2px;
+    transition: all 0.2s ease;
+    font-family: sans-serif;
+    perspective: 100px;
+  }
+  .checkbox-wrapper-10 .tgl-flip + .tgl-btn:after,
+  .checkbox-wrapper-10 .tgl-flip + .tgl-btn:before {
+    display: inline-block;
+    transition: all 0.4s ease;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    line-height: 2em;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 4px;
+  }
+  .checkbox-wrapper-10 .tgl-flip + .tgl-btn:after {
+    content: attr(data-tg-on);
+    background: #02C66F;
+    transform: rotateY(-180deg);
+  }
+  .checkbox-wrapper-10 .tgl-flip + .tgl-btn:before {
+    background: #FF3A19;
+    content: attr(data-tg-off);
+  }
+  .checkbox-wrapper-10 .tgl-flip + .tgl-btn:active:before {
+    transform: rotateY(-20deg);
+  }
+  .checkbox-wrapper-10 .tgl-flip:checked + .tgl-btn:before {
+    transform: rotateY(180deg);
+  }
+  .checkbox-wrapper-10 .tgl-flip:checked + .tgl-btn:after {
+    transform: rotateY(0);
+    left: 0;
+    background: #7FC6A6;
+  }
+  .checkbox-wrapper-10 .tgl-flip:checked + .tgl-btn:active:after {
+    transform: rotateY(20deg);
+  }
